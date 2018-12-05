@@ -1,4 +1,4 @@
-#baseURL = "https://lobre.github.io/slides"
+baseURL = "https://lobre.github.io/slides/"
 languageCode = "en-us"
 title = "Slides"
 theme = "reveal-hugo"
