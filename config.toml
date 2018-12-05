@@ -1,0 +1,10 @@
+#baseURL = "https://lobre.github.io/slides"
+languageCode = "en-us"
+title = "Slides"
+theme = "reveal-hugo"
+disableKinds = ["sitemap", "RSS", "taxonomy", "taxonomyTerm"]
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
