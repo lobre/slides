@@ -4,6 +4,9 @@ title = "Slides"
 theme = "reveal-hugo"
 disableKinds = ["sitemap", "RSS", "taxonomy", "taxonomyTerm"]
 
+[params.reveal_hugo]
+reveal_cdn = "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0"
+
 [outputFormats.Reveal]
 baseName = "index"
 mediaType = "text/html"
