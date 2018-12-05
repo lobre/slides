@@ -1,0 +1,81 @@
+<!doctype html><html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.52" />
+    <meta charset="utf-8">
+    <title>My presentation</title>
+    
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/reveal-js/css/reveal.css">
+    <link rel="stylesheet" href="/reveal-js/css/theme/moon.css" id="theme"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '\/reveal-js/css/print/pdf.css' : '\/reveal-js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+<section>
+
+<h1 id="hello-world">Hello world!</h1>
+
+<p>This is my first slide.</p>
+</section>
+
+</div>
+      
+
+    </div>
+    <script type="application/json" id="reveal-hugo-site-params">null</script>
+    <script type="application/json" id="reveal-hugo-page-params">{"theme":"moon"}</script>
+    <script type="text/javascript"> window.revealHugoDependencies = { dependencies: [ { src: '\/reveal-js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '\/reveal-js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '\/reveal-js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '\/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '\/reveal-js/plugin/zoom-js/zoom.js', async: true },
+          
+          { src: '\/reveal-js\/plugin\/notes\/notes.js', async: true }
+      ]};
+    </script>
+    <script src="/reveal-js/lib/js/head.min.js"></script>
+    <script src="/reveal-js/js/reveal.js"></script>
+    <script type="text/javascript">
+      
+      
+      function camelize(map) {
+        if (map) {
+          Object.keys(map).forEach(function(k) {
+            newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+            if (newK != k) {
+              map[newK] = map[k];
+              delete map[k];
+            }
+          });
+        }
+        return map;
+      }
+      
+      var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+      var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+      var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+      
+      var options = Object.assign({},
+        camelize(revealHugoDefaults),
+        camelize(revealHugoSiteParams),
+        camelize(revealHugoPageParams),
+        revealHugoDependencies);
+      Reveal.initialize(options);
+    </script>
+    
+    
+  </body>
+</html>
