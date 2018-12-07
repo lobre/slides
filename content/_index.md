@@ -1,11 +1,8 @@
 +++
-title = "My presentation"
+title = "Slides"
 outputs = ["Reveal"]
-
-[reveal_hugo]
-theme = "moon"
 +++
 
-# Hello world!
+# Slides
 
-This is my first slide.
+ - [Split]({{< ref "/split/_index.md" >}})
