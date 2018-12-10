@@ -1,15 +1,14 @@
 <!doctype html><html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
-    <title>Slides</title>
+    <title>Split</title>
     
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.css" id="theme"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/simple.css" id="theme"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     
     <script>
       var link = document.createElement( 'link' );
@@ -27,10 +26,110 @@
   
 <section>
 
-<h1 id="slides">Slides</h1>
+<h1 id="docker-compose-split">docker-compose split</h1>
+
+</section>
+
+<section data-shortcode-section>
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-1-1_hu3bdce3d26ffd534a40b3627791fac872_55571_800x0_resize_box_2.png" alt="schema 1-1" width="800" height="600"></p>
+
+</section>
+
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-1-2_hu2175e2ae0f51976c1ac18d86499b00d4_75939_800x0_resize_box_2.png" alt="schema 1-2" width="800" height="600"></p>
+
+</section>
+
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-1-3_hu21d13023755abda3ff6f4054a8921d3e_85045_800x0_resize_box_2.png" alt="schema 1-3" width="800" height="600"></p>
+
+</section>
+
+</section>
+
+<section data-shortcode-section>
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-2-1_hu93126a0a2739624c61ebf438375c4f2e_55521_800x0_resize_box_2.png" alt="schema 2-1" width="800" height="600"></p>
+
+</section>
+
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-2-2_hu9013a6ffd2338fe173aa1baf68eb21d1_78170_800x0_resize_box_2.png" alt="schema 2-2" width="800" height="600"></p>
+
+</section>
+
+<p><section data-noprocess data-shortcode-slide
+      data-transition="none"></p>
+
+<p><img style="max-width: 100%; height: auto;" src="/slides/split/split-2-3_hu6551bb24f78b20696e97ca51814aee5e_93476_800x0_resize_box_2.png" alt="schema 2-3" width="800" height="600"></p>
+
+</section>
+
+</section><section>
+
+<h2 id="benefits">Benefits</h2>
 
 <ul>
-<li><a href="https://lobre.github.io/slides/split/">Split</a></li>
+<li>Decrease resources usage</li>
+<li>Speed up local machine setup</li>
+<li>Avoid over publishing ports</li>
+<li>Provide web interface</li>
+</ul>
+
+</section><section>
+
+<h2 id="demo-toolbox">Demo toolbox</h2>
+
+<aside class="notes"><p>docker inspect traefik | jq -r &lsquo;.[0].NetworkSettings.Networks | keys&rsquo;</p>
+
+<p>docker run &ndash;rm &ndash;name nginx &ndash;label traefik.enable=true &ndash;label traefik.frontend.rule=Host:nginx.local &ndash;label ghosts.host=nginx.local nginx</p>
+
+<ul>
+<li>category</li>
+<li>description</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="demo-amer">Demo Amer</h2>
+
+<aside class="notes"><p>git co jira/ETECH-882_split-docker-compose</p>
+</aside>
+
+</section><section>
+
+<h2 id="to-setup-machine">To setup machine</h2>
+
+<ul>
+<li>Install docker toolbox</li>
+<li>Clone, setup and start toolkit</li>
+<li>Clone Magento project</li>
+<li>Start desired instance</li>
+<li>Import dump</li>
+</ul>
+
+</section><section>
+
+<h2 id="next-steps">Next steps</h2>
+
+<ul>
+<li>Finish splitting instances</li>
+<li>Beta test with a few developers</li>
+<li>Add profiling tools</li>
+<li>Centralize mailcatcher</li>
+<li>Support Docker for Windows?</li>
 </ul>
 </section>
 
@@ -39,7 +138,7 @@
 
     </div>
     <script type="application/json" id="reveal-hugo-site-params">{"reveal_cdn":"https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0"}</script>
-    <script type="application/json" id="reveal-hugo-page-params">null</script>
+    <script type="application/json" id="reveal-hugo-page-params">{"theme":"simple"}</script>
     <script type="text/javascript"> window.revealHugoDependencies = { dependencies: [ { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/reveal.js\/3.7.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
