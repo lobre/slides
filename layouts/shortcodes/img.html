@@ -1,0 +1,15 @@
+{{ $original := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
+{{ $alt := .Get 1 }}
+{{ $command := .Get 2 }}
+{{ $options := .Get 3 }}
+{{ if eq $command "Fit"}}
+{{ .Scratch.Set "image" ($original.Fit $options) }}
+{{ else if eq $command "Resize"}}
+{{ .Scratch.Set "image" ($original.Resize $options) }}
+{{ else if eq $command "Fill"}}
+{{ .Scratch.Set "image" ($original.Fill $options) }}
+{{ else }}
+{{ .Scratch.Set "image" $original }}
+{{ end }}
+{{ $image := .Scratch.Get "image" }}
+<img style="max-width: 100%; height: auto;" src="{{ $image.RelPermalink }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}">

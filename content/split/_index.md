@@ -3,6 +3,14 @@ title = "Split"
 outputs = ["Reveal"]
 [reveal_hugo]
 theme = "simple"
+
+[[resources]]
+  name = "split-1-:counter"
+  src = "split-1*.png"
+
+[[resources]]
+  name = "split-2-:counter"
+  src = "split-2*.png"
 +++
 
 # docker-compose split
@@ -11,15 +19,21 @@ theme = "simple"
 
 {{% section %}}
 
-<img src="/slides/split/split-1-1.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-1-1" "schema 1-1" "Resize" "800x" >}}
 
 ---
 
-<img src="/slides/split/split-1-2.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-1-2" "schema 1-2" "Resize" "800x" >}}
 
 ---
 
-<img src="/slides/split/split-1-3.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-1-3" "schema 1-3" "Resize" "800x" >}}
 
 {{% /section %}}
 
@@ -27,15 +41,21 @@ theme = "simple"
 
 {{% section %}}
 
-<img src="/slides/split/split-2-1.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-2-1" "schema 2-1" "Resize" "800x" >}}
 
 ---
 
-<img src="/slides/split/split-2-2.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-2-2" "schema 2-2" "Resize" "800x" >}}
 
 ---
 
-<img src="/slides/split/split-2-3.png" width="800" />
+{{< slide transition="none" >}}
+
+{{< img "split-2-3" "schema 2-3" "Resize" "800x" >}}
 
 {{% /section %}}
 
